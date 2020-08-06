@@ -1,0 +1,6 @@
+---
+applications:
+  - name: ble-tracker-server
+    command: node index.js
+    memory: 512M
+    instances: 1
