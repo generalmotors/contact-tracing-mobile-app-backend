@@ -2,7 +2,10 @@
 
 ## What is this app?
 
-Simple NodeJS Postgres service for storing beacon registration information and phone numbers of users who have reported they tested positive via the mobile app. The Contact Tracing app for both iOS and Android use this backend functionality. 
+This application is the back-end component of a contact tracing system. This simple NodeJS Postgres service is for storing beacon registration information and phone numbers of users who have reported they tested positive via the mobile app. The Contact Tracing app for both iOS and Android use this backend functionality. 
+
+- Android Mobile App: https://github.com/generalmotors/covidwatch-android-tcn
+- iOS Mobile App: https://github.com/generalmotors/covidwatch-ios-tcn
 
 ### iBeacon Registration
 1.	Beacon Registration Endpoint - to register Beacon Identifier with TCN
