@@ -9,9 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cors": "^2.8.5",
     "express": "^4.17.1",
-    "express-validator": "^6.5.0",
+    "express-validator": "^6.6.0",
+    "is-base64": "^1.1.0",
     "microtime": "^3.0.0",
     "pg": "^8.0.3"
   }

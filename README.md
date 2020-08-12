@@ -1,25 +1,26 @@
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
 # Contact Tracing Service
 
 ## What is this app?
 
-This application is the back-end component of a contact tracing system. This simple NodeJS Postgres service is for storing beacon registration information and phone numbers of users who have reported they tested positive via the mobile app. The Contact Tracing app for both iOS and Android use this backend functionality. 
+Simple Nodejs, Express, and Postgres service for storing beacon registration information and phone numbers of users who have reported they tested positive via the mobile app. 
 
-- Android Mobile App: https://github.com/generalmotors/covidwatch-android-tcn
-- iOS Mobile App: https://github.com/generalmotors/covidwatch-ios-tcn
+Additional functionality includes:
 
-### iBeacon Registration
-1.	Beacon Registration Endpoint - to register Beacon Identifier with TCN
-2.	Beacon TCN Retrieval Endpoint - to retrieve TCN based on Beacon Identifier
-### User Contact Registration
-1.	User Contact Endpoint - to post user's number on Covid-19 potentially infectious report
+1. Retrieval of devices models and their associated ids that are shared via ble manufacturing data on the phones (currently static file phone_model.json)
+2. Storing of posted calibration data sent by mobile app users when physically 7ft from a detected device
+3. Customizable device model-to-model distance profiling based on posted calibration data (currently static file distance_profile.json)
+
+ The Contact Tracing app for both [iOS](https://github.com/generalmotors/covidwatch-ios-tcn) and [Android](https://github.com/generalmotors/covidwatch-android-tcn) use this back end to properly function.
 
 ## Setup
 
 1. Clone this repo from the `master` branch:
-2. Install [nodejs](https://nodejs.org/en/)
+2. Install [nodejs](https://nodejs.org/)
 3. Install and configure [postgres](https://www.postgresql.org/)
 4. Configure Postgres connection to your database in `database.js`
-5. Create tables using script file `database.sql`
+5. Create tables using queries in file `database.sql`
 6. Run the app
 ```
 npm install
